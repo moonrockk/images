@@ -60,6 +60,10 @@ RUN \
 
 COPY entrypoint.sh /
 
+RUN rm -r /usr/share/fonts/truetype/
+RUN mkdir /usr/share/fonts/truetype/
+COPY Fonts /usr/share/fonts/truetype/
+
 USER selenium
 
 EXPOSE 4444
